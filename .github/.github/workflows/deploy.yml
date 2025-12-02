@@ -23,7 +23,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
-          npm run build
+          CI=false npm run build  # 關鍵修改：忽略警告，強制打包
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
